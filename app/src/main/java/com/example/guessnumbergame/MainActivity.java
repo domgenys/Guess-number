@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         }else{
             message ="Correct";
+
+            Random rand = new Random();
+
+// Obtain a number between [0 - 20].
+            randomNumber = rand.nextInt(20)+ 1;
         }
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
