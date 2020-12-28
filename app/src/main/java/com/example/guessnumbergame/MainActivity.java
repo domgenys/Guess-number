@@ -15,6 +15,13 @@ public class MainActivity extends AppCompatActivity {
 
     int randomNumber;
 
+    public void generatedRandomNumber(){
+        Random rand = new Random();
+
+// Obtain a number between [0 - 20].
+        randomNumber = rand.nextInt(20)+ 1;
+
+    }
 
     public void guess(View view){
 
@@ -31,12 +38,9 @@ public class MainActivity extends AppCompatActivity {
             message = "Higher";
 
         }else{
-            message ="Correct";
+            message ="Correct, You can try again:)";
 
-            Random rand = new Random();
-
-// Obtain a number between [0 - 20].
-            randomNumber = rand.nextInt(20)+ 1;
+            generatedRandomNumber();
         }
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
@@ -52,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Random rand = new Random();
-
-// Obtain a number between [0 - 20].
-       randomNumber = rand.nextInt(20)+ 1;
+        generatedRandomNumber();
     }
 }
