@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-
+//logcat to check if number was inserted and random num was generated
         Log.i("Inserted number", editText.getText().toString());
         Log.i("Random number", Integer.toString(randomNumber));
 
 
     }
-
+//method on display
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
